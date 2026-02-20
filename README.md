@@ -1,31 +1,31 @@
-# Моделирование полёта тела в атмосфере
+п»ї# РњРѕРґРµР»РёСЂРѕРІР°РЅРёРµ РїРѕР»С‘С‚Р° С‚РµР»Р° РІ Р°С‚РјРѕСЃС„РµСЂРµ
 
-## Описание
-Данное приложение моделирует движение тела в атмосфере с учётом сопротивления воздуха. Реализована возможность задания начальной скорости и угла запуска, а также моделирования с разными шагами по времени. Результаты отображаются в виде траекторий на графике и таблицы с ключевыми характеристиками полёта.
+## РћРїРёСЃР°РЅРёРµ
+Р”Р°РЅРЅРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ РјРѕРґРµР»РёСЂСѓРµС‚ РґРІРёР¶РµРЅРёРµ С‚РµР»Р° РІ Р°С‚РјРѕСЃС„РµСЂРµ СЃ СѓС‡С‘С‚РѕРј СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёСЏ РІРѕР·РґСѓС…Р°. Р РµР°Р»РёР·РѕРІР°РЅР° РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ Р·Р°РґР°РЅРёСЏ РЅР°С‡Р°Р»СЊРЅРѕР№ СЃРєРѕСЂРѕСЃС‚Рё Рё СѓРіР»Р° Р·Р°РїСѓСЃРєР°, Р° С‚Р°РєР¶Рµ РјРѕРґРµР»РёСЂРѕРІР°РЅРёСЏ СЃ СЂР°Р·РЅС‹РјРё С€Р°РіР°РјРё РїРѕ РІСЂРµРјРµРЅРё. Р РµР·СѓР»СЊС‚Р°С‚С‹ РѕС‚РѕР±СЂР°Р¶Р°СЋС‚СЃСЏ РІ РІРёРґРµ С‚СЂР°РµРєС‚РѕСЂРёР№ РЅР° РіСЂР°С„РёРєРµ Рё С‚Р°Р±Р»РёС†С‹ СЃ РєР»СЋС‡РµРІС‹РјРё С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєР°РјРё РїРѕР»С‘С‚Р°.
 
 ---
 
-## Используемые физические формулы
-- Сопротивление воздуха рассчитывается по формуле:
+## РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С„РёР·РёС‡РµСЃРєРёРµ С„РѕСЂРјСѓР»С‹
+- РЎРѕРїСЂРѕС‚РёРІР»РµРЅРёРµ РІРѕР·РґСѓС…Р° СЂР°СЃСЃС‡РёС‚С‹РІР°РµС‚СЃСЏ РїРѕ С„РѕСЂРјСѓР»Рµ:
   
   \[
   F_d = \frac{1}{2} \rho C_d A v^2
   \]
   
-  где:  
-  \( \rho \) — плотность воздуха,  
-  \( C_d \) — коэффициент сопротивления,  
-  \( A \) — площадь поперечного сечения тела,  
-  \( v \) — скорость тела.  
+  РіРґРµ:  
+  \( \rho \) вЂ” РїР»РѕС‚РЅРѕСЃС‚СЊ РІРѕР·РґСѓС…Р°,  
+  \( C_d \) вЂ” РєРѕСЌС„С„РёС†РёРµРЅС‚ СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёСЏ,  
+  \( A \) вЂ” РїР»РѕС‰Р°РґСЊ РїРѕРїРµСЂРµС‡РЅРѕРіРѕ СЃРµС‡РµРЅРёСЏ С‚РµР»Р°,  
+  \( v \) вЂ” СЃРєРѕСЂРѕСЃС‚СЊ С‚РµР»Р°.  
 
-- Движение рассчитывается методом **явного интегрирования (Euler)** с выбранным шагом по времени \(\Delta t\).
+- Р”РІРёР¶РµРЅРёРµ СЂР°СЃСЃС‡РёС‚С‹РІР°РµС‚СЃСЏ РјРµС‚РѕРґРѕРј **СЏРІРЅРѕРіРѕ РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ (Euler)** СЃ РІС‹Р±СЂР°РЅРЅС‹Рј С€Р°РіРѕРј РїРѕ РІСЂРµРјРµРЅРё \(\Delta t\).
 
-## Примеры работы программы
-![Траектории полёта тела](s1.jpg)
-![Финальный вид графика](s2.jpg)
-![Пример на других данных](s3.jpg)
+## РџСЂРёРјРµСЂС‹ СЂР°Р±РѕС‚С‹ РїСЂРѕРіСЂР°РјРјС‹
+![РўСЂР°РµРєС‚РѕСЂРёРё РїРѕР»С‘С‚Р° С‚РµР»Р°](s1.jpg)
+![Р¤РёРЅР°Р»СЊРЅС‹Р№ РІРёРґ РіСЂР°С„РёРєР°](s2.jpg)
+![РџСЂРёРјРµСЂ РЅР° РґСЂСѓРіРёС… РґР°РЅРЅС‹С…](s3.jpg)
 
-## Исходный код программы
+## РСЃС…РѕРґРЅС‹Р№ РєРѕРґ РїСЂРѕРіСЂР°РјРјС‹
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -56,7 +56,7 @@ public class MainForm : Form
 
     public MainForm()
     {
-        Text = "Моделирование полёта";
+        Text = "РњРѕРґРµР»РёСЂРѕРІР°РЅРёРµ РїРѕР»С‘С‚Р°";
         Size = new Size(1200, 760);
         StartPosition = FormStartPosition.CenterScreen;
 
@@ -69,25 +69,25 @@ public class MainForm : Form
         mainLayout.Controls.Add(leftPanel, 0, 0);
 
         int y = 8;
-        leftPanel.Controls.Add(new Label { Text = "Параметры", Font = new Font("Segoe UI", 10, FontStyle.Bold), Location = new Point(8, y), AutoSize = true });
+        leftPanel.Controls.Add(new Label { Text = "РџР°СЂР°РјРµС‚СЂС‹", Font = new Font("Segoe UI", 10, FontStyle.Bold), Location = new Point(8, y), AutoSize = true });
         y += 32;
 
-        leftPanel.Controls.Add(new Label { Text = "Начальная скорость (м/с):", Location = new Point(8, y), AutoSize = true });
+        leftPanel.Controls.Add(new Label { Text = "РќР°С‡Р°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ (Рј/СЃ):", Location = new Point(8, y), AutoSize = true });
         nudSpeed = new NumericUpDown { Location = new Point(200, y - 4), Minimum = 0, Maximum = 10000, DecimalPlaces = 2, Value = 100.00M, Width = 120 };
         leftPanel.Controls.Add(nudSpeed);
         y += 36;
 
-        leftPanel.Controls.Add(new Label { Text = "Угол (град):", Location = new Point(8, y), AutoSize = true });
+        leftPanel.Controls.Add(new Label { Text = "РЈРіРѕР» (РіСЂР°Рґ):", Location = new Point(8, y), AutoSize = true });
         nudAngle = new NumericUpDown { Location = new Point(200, y - 4), Minimum = 0, Maximum = 90, DecimalPlaces = 2, Value = 45.00M, Width = 120 };
         leftPanel.Controls.Add(nudAngle);
         y += 36;
 
-        leftPanel.Controls.Add(new Label { Text = "Масса (кг):", Location = new Point(8, y), AutoSize = true });
+        leftPanel.Controls.Add(new Label { Text = "РњР°СЃСЃР° (РєРі):", Location = new Point(8, y), AutoSize = true });
         nudMass = new NumericUpDown { Location = new Point(200, y - 4), Minimum = 0.001M, Maximum = 10000, DecimalPlaces = 3, Value = 1.0M, Width = 120 };
         leftPanel.Controls.Add(nudMass);
         y += 36;
 
-        leftPanel.Controls.Add(new Label { Text = "Площадь (м?):", Location = new Point(8, y), AutoSize = true });
+        leftPanel.Controls.Add(new Label { Text = "РџР»РѕС‰Р°РґСЊ (Рј?):", Location = new Point(8, y), AutoSize = true });
         nudArea = new NumericUpDown { Location = new Point(200, y - 4), Minimum = 0.00001M, Maximum = 1000, DecimalPlaces = 5, Value = 0.01M, Width = 120 };
         leftPanel.Controls.Add(nudArea);
         y += 36;
@@ -97,16 +97,16 @@ public class MainForm : Form
         leftPanel.Controls.Add(nudCd);
         y += 46;
 
-        btnRun = new Button { Text = "Запустить", Location = new Point(8, y), Width = 140, Height = 36 };
+        btnRun = new Button { Text = "Р—Р°РїСѓСЃС‚РёС‚СЊ", Location = new Point(8, y), Width = 140, Height = 36 };
         btnRun.Click += BtnRun_Click;
         leftPanel.Controls.Add(btnRun);
 
-        btnClearGraphs = new Button { Text = "Очистить графики", Location = new Point(158, y), Width = 140, Height = 36 };
+        btnClearGraphs = new Button { Text = "РћС‡РёСЃС‚РёС‚СЊ РіСЂР°С„РёРєРё", Location = new Point(158, y), Width = 140, Height = 36 };
         btnClearGraphs.Click += BtnClearGraphs_Click;
         leftPanel.Controls.Add(btnClearGraphs);
         y += 44;
 
-        btnClearAll = new Button { Text = "Очистить всё", Location = new Point(8, y), Width = 290, Height = 36 };
+        btnClearAll = new Button { Text = "РћС‡РёСЃС‚РёС‚СЊ РІСЃС‘", Location = new Point(8, y), Width = 290, Height = 36 };
         btnClearAll.Click += BtnClearAll_Click;
         leftPanel.Controls.Add(btnClearAll);
 
@@ -117,8 +117,8 @@ public class MainForm : Form
 
         chart = new Chart { Dock = DockStyle.Fill, BackColor = Color.White, Margin = new Padding(0) };
         var ca = new ChartArea("Default");
-        ca.AxisX.Title = "Дальность, м";
-        ca.AxisY.Title = "Высота, м";
+        ca.AxisX.Title = "Р”Р°Р»СЊРЅРѕСЃС‚СЊ, Рј";
+        ca.AxisY.Title = "Р’С‹СЃРѕС‚Р°, Рј";
         ca.AxisX.LabelStyle.Format = "F0";
         ca.AxisY.LabelStyle.Format = "F0";
         ca.AxisY.IsStartedFromZero = true;
@@ -155,9 +155,9 @@ public class MainForm : Form
             dtToColumn[dts[i]] = dgv.Columns.Count - 1;
         }
 
-        dgv.Rows.Add("Дальность полёта, м");
-        dgv.Rows.Add("Макс. высота, м");
-        dgv.Rows.Add("Скорость в конечной точке, м/с");
+        dgv.Rows.Add("Р”Р°Р»СЊРЅРѕСЃС‚СЊ РїРѕР»С‘С‚Р°, Рј");
+        dgv.Rows.Add("РњР°РєСЃ. РІС‹СЃРѕС‚Р°, Рј");
+        dgv.Rows.Add("РЎРєРѕСЂРѕСЃС‚СЊ РІ РєРѕРЅРµС‡РЅРѕР№ С‚РѕС‡РєРµ, Рј/СЃ");
     }
 
     private void BtnClearGraphs_Click(object sender, EventArgs e)
@@ -457,9 +457,9 @@ public class MainForm : Form
     private struct PointD { public double X, Y; public PointD(double x, double y) { X = x; Y = y; } }
 }
 
-## Выводы
+## Р’С‹РІРѕРґС‹
 
-1. **Шаг моделирования влияет на точность:** при больших `dt` (например, 1?с) траектория грубая и дальность полёта меньше точного значения; при маленьких `dt` (0.001–0.0001?с) расчёты точнее, траектория плавнее.  
-2. **Сопротивление воздуха заметно уменьшает дальность:** без воздуха тело летело бы дальше и выше.  
-3. **Максимальная высота зависит от угла запуска:** чем ближе угол к 45°, тем выше траектория, но сопротивление слегка искажает идеальную форму.  
-4. **Сравнение разных шагов dt:** таблица и график позволяют визуально увидеть расхождение результатов и оценить влияние шага на точность и стабильность расчёта.
+1. **РЁР°Рі РјРѕРґРµР»РёСЂРѕРІР°РЅРёСЏ РІР»РёСЏРµС‚ РЅР° С‚РѕС‡РЅРѕСЃС‚СЊ:** РїСЂРё Р±РѕР»СЊС€РёС… `dt` (РЅР°РїСЂРёРјРµСЂ, 1?СЃ) С‚СЂР°РµРєС‚РѕСЂРёСЏ РіСЂСѓР±Р°СЏ Рё РґР°Р»СЊРЅРѕСЃС‚СЊ РїРѕР»С‘С‚Р° РјРµРЅСЊС€Рµ С‚РѕС‡РЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ; РїСЂРё РјР°Р»РµРЅСЊРєРёС… `dt` (0.001вЂ“0.0001?СЃ) СЂР°СЃС‡С‘С‚С‹ С‚РѕС‡РЅРµРµ, С‚СЂР°РµРєС‚РѕСЂРёСЏ РїР»Р°РІРЅРµРµ.  
+2. **РЎРѕРїСЂРѕС‚РёРІР»РµРЅРёРµ РІРѕР·РґСѓС…Р° Р·Р°РјРµС‚РЅРѕ СѓРјРµРЅСЊС€Р°РµС‚ РґР°Р»СЊРЅРѕСЃС‚СЊ:** Р±РµР· РІРѕР·РґСѓС…Р° С‚РµР»Рѕ Р»РµС‚РµР»Рѕ Р±С‹ РґР°Р»СЊС€Рµ Рё РІС‹С€Рµ.  
+3. **РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹СЃРѕС‚Р° Р·Р°РІРёСЃРёС‚ РѕС‚ СѓРіР»Р° Р·Р°РїСѓСЃРєР°:** С‡РµРј Р±Р»РёР¶Рµ СѓРіРѕР» Рє 45В°, С‚РµРј РІС‹С€Рµ С‚СЂР°РµРєС‚РѕСЂРёСЏ, РЅРѕ СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёРµ СЃР»РµРіРєР° РёСЃРєР°Р¶Р°РµС‚ РёРґРµР°Р»СЊРЅСѓСЋ С„РѕСЂРјСѓ.  
+4. **РЎСЂР°РІРЅРµРЅРёРµ СЂР°Р·РЅС‹С… С€Р°РіРѕРІ dt:** С‚Р°Р±Р»РёС†Р° Рё РіСЂР°С„РёРє РїРѕР·РІРѕР»СЏСЋС‚ РІРёР·СѓР°Р»СЊРЅРѕ СѓРІРёРґРµС‚СЊ СЂР°СЃС…РѕР¶РґРµРЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ Рё РѕС†РµРЅРёС‚СЊ РІР»РёСЏРЅРёРµ С€Р°РіР° РЅР° С‚РѕС‡РЅРѕСЃС‚СЊ Рё СЃС‚Р°Р±РёР»СЊРЅРѕСЃС‚СЊ СЂР°СЃС‡С‘С‚Р°.
